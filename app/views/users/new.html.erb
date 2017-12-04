@@ -1,0 +1,34 @@
+<h1><%= t ".signup" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+
+      <%= f.label :username, (t ".username") %>
+      <%= f.text_field :username %>
+
+      <%= f.label :name, (t ".name") %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email, (t ".email") %>
+      <%= f.email_field :email %>
+
+      <%= f.label :password, (t ".password") %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, (t ".password_confirmation") %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.label :address, (t ".address") %>
+      <%= f.text_field :address %>
+
+      <%= f.label :phone, (t ".phone") %>
+      <%= f.text_field :phone %>
+
+      <%= f.label :gender, (t ".gender") %>
+      <%= f.radio_button :gender, 0 %><label for="user_gender_0"><%= t ".male" %></label>
+      <%= f.radio_button :gender, 1 %><label for="user_gender_1"><%= t ".female" %></label>
+
+      <%= f.submit "Sign Up", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
