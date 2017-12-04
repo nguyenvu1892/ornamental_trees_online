@@ -25,6 +25,7 @@ gem 'materialize-sass'
 gem 'toastr-rails'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass'
+gem "i18n", "~> 0.7.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
