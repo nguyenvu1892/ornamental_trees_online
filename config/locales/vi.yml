@@ -1,4 +1,19 @@
 vi:
+  users:
+    new:
+      username: "Tên đăng nhập"
+      email: "Email"
+      name: "Họ và tên"
+      password: "Mật khẩu"
+      signup: "Đăng ký"
+      password_confirmation: "Xác nhận mật khẩu"
+      address: "Địa chỉ"
+      phone: "Số điện thoại"
+      gender: "Giới tính"
+      male: "Nam"
+      female: "Nữ"
+    create:
+      success: "Chào mừng bạn ghé thăm Shop!"
   sessions:
     new:
       email: "Email"
