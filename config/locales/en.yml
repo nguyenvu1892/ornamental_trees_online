@@ -1,4 +1,19 @@
 en:
+  user:
+    new:
+      username: "Username"
+      email: "Email"
+      name: "Name"
+      password: "Password"
+      signup: "Sign up"
+      password_confirmation: "Confirmation"
+      address: "Address"
+      phone: "Phone number"
+      gender: "Gender"
+      male: "Male"
+      female: "Female"
+    create:
+      success: "Welcome to the Flower Shop!"
   sessions:
     new:
       email: "Email"
