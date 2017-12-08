@@ -42,12 +42,12 @@
 
           <li class="li-list-item-top-menu">
             <ul class="ul-list-item-header">
-              <a class="link-to-item-header" href="#">
+              <%= link_to "/signup" do %>
                 <li class="li-list-item-header">
                   <i class="material-icons md-24 icon-in-top-menu">account_circle</i>
                 </li>
                 <li class="li-list-item-header"><%= t ".signup" %></li>
-              </a>
+              <% end %>
             </ul>
           </li>
 
