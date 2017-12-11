@@ -32,6 +32,10 @@ vi:
       name: "Tên sản phẩm:"
       price: "Giá: "
       category: "Phân loại:"
+      danger: "Không tìm thấy sản phẩm"
+      success: "Sản phẩm bạn chọn"
+    index:
+      cart: "thêm vào giỏ hàng"
   layouts:
     application:
       title: "Hoa Yeu Thuong"

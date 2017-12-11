@@ -32,6 +32,11 @@ en:
       name: "Product Name:"
       price: "Price: "
       category: "Category:"
+      danger: "Product not found"
+      success: "Product found"
+    index:
+      cart: "Add to cart"
+
   layouts:
     application:
       title: "Love Flower"
