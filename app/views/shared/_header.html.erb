@@ -20,7 +20,7 @@
     </li>
   </ul>
 
-  <nav class="cyan darken-3 z-depth-2" id="nav-header-shop">
+  <nav class="cyan z-depth-2" id="nav-header-enziin">
     <div class="container" id="customize-home-container">
       <div class="nav-wrapper">
         <%= link_to image_tag('logo.png'), root_path, class: 'brand-logo' %>
@@ -42,12 +42,12 @@
 
           <li class="li-list-item-top-menu">
             <ul class="ul-list-item-header">
-              <a class="link-to-item-header" href="#">
+              <%= link_to "/signup" do %>
                 <li class="li-list-item-header">
-                  <i class="material-icons md-24 icon-in-top-menu">account_circle</i>
+                  <i class="material-icons md-24 icons-task-header-menu">person_add</i>
                 </li>
                 <li class="li-list-item-header"><%= t ".signup" %></li>
-              </a>
+              <% end %>
             </ul>
           </li>
 
@@ -55,7 +55,7 @@
             <ul class="ul-list-item-header">
               <%= link_to login_path do %>
                 <li class="li-list-item-header">
-                  <i class="material-icons md-24 icon-in-top-menu">forward</i>
+                  <i class="material-icons md-24 icons-task-header-menu">lock</i>
                 </li>
                 <li class="li-list-item-header"><%= t ".login" %></li>
               <% end %>
