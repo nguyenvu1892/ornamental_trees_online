@@ -1,0 +1,44 @@
+vi:
+  users:
+    new:
+      username: "Tên đăng nhập"
+      email: "Email"
+      name: "Họ và tên"
+      password: "Mật khẩu"
+      signup: "Đăng ký"
+      password_confirmation: "Xác nhận mật khẩu"
+      address: "Địa chỉ"
+      phone: "Số điện thoại"
+      gender: "Giới tính"
+      male: "Nam"
+      female: "Nữ"
+    create:
+      success: "Chào mừng bạn ghé thăm Shop!"
+  sessions:
+    new:
+      email: "Email"
+      password: "mật khẩu"
+      loggin: "Đăng nhập"
+      new_user: "chưa có tài khoản"
+      signup: "Đăng ký"
+      login_google: "Log in with Google"
+      login_facebook: "Log in with Facebook"
+      login_twiiter: "Log in with Twiiter"
+    create:
+      danger: "email / mật khẩu không hợp lệ"
+  layouts:
+    application:
+      title: "Hoa Yeu Thuong"
+    header:
+      product: "Sản Phẩm"
+      login: "Đăng Nhập"
+      signup: "Đăng Kí"
+      setting: "Cài Đặt"
+      history_order: "Lịch sử mua hàng"
+      logout: "Đăng xuất"
+    footer:
+      logo: "Sun Flower"
+      connect: "Connect us"
+      about_us: "About Us"
+      help: "Help"
+      terms: "Terms of Use"
