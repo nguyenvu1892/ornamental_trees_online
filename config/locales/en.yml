@@ -26,6 +26,12 @@ en:
       login_twiiter: "Log in with Twiiter"
     create:
       danger: "invalid email/password combination"
+  products:
+    show:
+      buy: "Buy now"
+      name: "Product Name:"
+      price: "Price: "
+      category: "Category:"
   layouts:
     application:
       title: "Love Flower"
