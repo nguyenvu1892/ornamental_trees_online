@@ -23,6 +23,7 @@ gem "materialize-sass"
 gem "toastr-rails"
 gem "font-awesome-rails"
 gem "font-awesome-sass"
+gem "will_paginate", "~> 3.1.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

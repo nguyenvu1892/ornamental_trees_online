@@ -31,18 +31,18 @@
         <ul class="right hide-on-med-and-down">
           <li class="li-list-item-top-menu">
             <ul class="ul-list-item-header">
-              <a class="link-to-item-header" href="#">
+              <%= link_to products_path do %>
                 <li class="li-list-item-header">
                   <i class="material-icons md-24 icon-in-top-menu">device_hub</i>
                 </li>
                 <li class="li-list-item-header"><%= t ".product" %></li>
-              </a>
+              <% end %>
             </ul>
           </li>
 
           <li class="li-list-item-top-menu">
             <ul class="ul-list-item-header">
-              <%= link_to "/signup" do %>
+              <%= link_to signup_path do %>
                 <li class="li-list-item-header">
                   <i class="material-icons md-24 icons-task-header-menu">person_add</i>
                 </li>

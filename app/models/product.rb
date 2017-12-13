@@ -4,4 +4,6 @@ class Product < ApplicationRecord
   has_many :reviews
   has_many :images
   has_many :carts
+
+  validates :name, presence: true
 end

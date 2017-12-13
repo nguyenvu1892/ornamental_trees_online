@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :carts
   has_secure_password
+  validates :password, presence: true, length: {minimum: 6}
 
   def User.digest string
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
