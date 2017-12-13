@@ -48,3 +48,15 @@ vi:
       about_us: "About Us"
       help: "Help"
       terms: "Terms of Use"
+  admin:
+    products:
+      new:
+        title: "Thêm sản phẩm"
+        name: "Tên sản phẩm"
+        category: "Danh mục"
+        price: "Giá"
+        quantity: "Số lượng"
+        add: "Thêm sản phẩm"
+        nocategory: "Không có danh mục nào"
+      create:
+        success: "Sản phẩm đã được thêm"

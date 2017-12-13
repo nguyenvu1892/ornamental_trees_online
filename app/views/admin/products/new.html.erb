@@ -1,0 +1,16 @@
+<h2><%= t ".title" %></h2>
+<%= form_for [:admin, @product] do |f| %>
+  <%= f.label :name, t(".name") %>
+  <%= f.text_field :name, placeholder: t(".name") %>
+
+  <%= f.label :category, t(".category") %>
+  <%= f.collection_select :category_id, Category.all, :id, :name %>
+
+  <%= f.label :price, (t ".price") %>
+  <%= f.text_field :price, placeholder: (t ".price") %>
+
+  <%= f.label :quantity, (t ".quantity") %>
+  <%= f.text_field :quantity, placeholder: (t ".quantity") %>
+
+  <%= f.submit (t ".add"), class: "btn" %>
+<% end %>
