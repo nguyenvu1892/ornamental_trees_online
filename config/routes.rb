@@ -7,8 +7,14 @@ Rails.application.routes.draw do
   get    "/login",    to: "sessions#new"
   post    "/login",   to: "sessions#create"
   delete  "/logout",  to: "sessions#destroy"
-  resources :products
+  resources :products, only: [:index, :show]
   resources :users
+  namespace :admin do
+    root "admin#index"
+    resources :users, only: [:index, :delete]
+    resources :products, except: [:index, :show]
+    resources :categories
+  end
 
   root "static_pages#home"
 end
