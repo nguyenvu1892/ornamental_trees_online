@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "admin#index"
     resources :users, only: [:index, :delete]
-    resources :products, except: [:index, :show]
+    resources :products
     resources :categories
   end
 
