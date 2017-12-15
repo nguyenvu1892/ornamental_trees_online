@@ -53,3 +53,15 @@ en:
       about_us: "About Us"
       help: "Help"
       terms: "Terms of Use"
+  admin:
+    products:
+      new:
+        title: "New product"
+        name: "Product name"
+        category: "Category"
+        price: "Price"
+        quantity: "Quantity"
+        add: "Add product"
+        nocategory: "Have no category"
+      create:
+        success: "Product was added"
