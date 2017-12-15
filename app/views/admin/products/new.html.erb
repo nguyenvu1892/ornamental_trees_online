@@ -1,16 +1,10 @@
-<h2><%= t ".title" %></h2>
-<%= form_for [:admin, @product] do |f| %>
-  <%= f.label :name, t(".name") %>
-  <%= f.text_field :name, placeholder: t(".name") %>
+<div class="card">
+  <div class="title-sign-up-page center">
+    <%= t ".title" %>
+  </div>
+  <div class="card-content">
+    <%= render "form", product: @product %>
+    <%= link_to (t "admin.products.edit.back"), products_path %>
+  </div>
+</div>
 
-  <%= f.label :category, t(".category") %>
-  <%= f.collection_select :category_id, Category.all, :id, :name %>
-
-  <%= f.label :price, (t ".price") %>
-  <%= f.text_field :price, placeholder: (t ".price") %>
-
-  <%= f.label :quantity, (t ".quantity") %>
-  <%= f.text_field :quantity, placeholder: (t ".quantity") %>
-
-  <%= f.submit (t ".add"), class: "btn" %>
-<% end %>

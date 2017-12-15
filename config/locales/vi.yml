@@ -58,18 +58,45 @@ vi:
         category: "Danh mục"
         price: "Giá"
         quantity: "Số lượng"
-        add: "Thêm sản phẩm"
+        add: "Xác nhận"
         nocategory: "Không có danh mục nào"
+      edit:
+        title: "Edit Product"
+        back: "Back"
+        update: "Update Succes"
       create:
         success: "Sản phẩm đã được thêm"
       destroy:
         success: "Xóa sản phẩm"
         danger: "Không thể xóa sản phẩm này"
-    admin:
-      index:
-        delete: "Xoa san pham"
-        sure: "Ban muon xoa san pham nay?"
-        new: "Thêm sản phẩm"
+      product:
+        del: "Xóa"
+        edit: "Sửa"
+      admin:
+        index:
+          dashboard: "Dashboard"
+          user: "Total Users"
+          product: "Total Product"
+          delete: "Delete product"
+          sure: "You sure?"
+          new: "New Product"
+        leftmenu:
+          menu: "Menu"
+          user: "User"
+          product: "Product"
+        users:
+          ID: "ID"
+          name: "Name"
+          email: "Email"
+          date: "Created Date"
+          del: "Delete"
   shared:
     product:
       cart: "Thêm vào giỏ hàng"
+      index:
+        id: "ID"
+        product_name: "Tên Sản Phẩm"
+        price: "Giá"
+        quantity: "Số lượng"
+        detele: "Xóa"
+        edit: "Sửa"
