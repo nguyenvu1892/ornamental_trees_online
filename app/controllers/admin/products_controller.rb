@@ -1,5 +1,4 @@
 class Admin::ProductsController < ApplicationController
-
   def new
     @product = Product.new
   end
@@ -17,6 +16,22 @@ class Admin::ProductsController < ApplicationController
     else
       flash[:success] = t ".nocategory"
       render :new
+    end
+  end
+
+  def destroy
+    @product = Product.find_by id: params[:id]
+    if @product.present?
+      if @product.destroy
+        flash[:success] = t ".success"
+        redirect_to admin_root_url
+      else
+        flash[:danger] = t ".danger"
+        redirect_to admin_root_url
+      end
+    else
+      flash[:danger] = t ".danger"
+      redirect_to admin_root_url
     end
   end
 

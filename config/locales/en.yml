@@ -34,9 +34,6 @@ en:
       category: "Category:"
       danger: "Product not found"
       success: "Product found"
-    index:
-      cart: "Add to cart"
-
   layouts:
     application:
       title: "Love Flower"
@@ -65,3 +62,14 @@ en:
         nocategory: "Have no category"
       create:
         success: "Product was added"
+      destroy:
+        success: "Product was deleted"
+        danger: "Can't delete this product"
+    admin:
+      index:
+        delete: "Delete product"
+        sure: "You sure?"
+        new: "New Product"
+  shared:
+    product:
+      cart: "Add to cart"

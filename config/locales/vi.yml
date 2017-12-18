@@ -34,8 +34,6 @@ vi:
       category: "Phân loại:"
       danger: "Không tìm thấy sản phẩm"
       success: "Sản phẩm bạn chọn"
-    index:
-      cart: "thêm vào giỏ hàng"
   layouts:
     application:
       title: "Hoa Yeu Thuong"
@@ -48,9 +46,9 @@ vi:
       logout: "Đăng xuất"
     footer:
       logo: "Sun Flower"
-      connect: "Connect us"
-      about_us: "About Us"
-      help: "Help"
+      connect: "Lien He"
+      about_us: "Gioi Thieu"
+      help: "Ho Tro"
       terms: "Terms of Use"
   admin:
     products:
@@ -64,3 +62,14 @@ vi:
         nocategory: "Không có danh mục nào"
       create:
         success: "Sản phẩm đã được thêm"
+      destroy:
+        success: "Xóa sản phẩm"
+        danger: "Không thể xóa sản phẩm này"
+    admin:
+      index:
+        delete: "Xoa san pham"
+        sure: "Ban muon xoa san pham nay?"
+        new: "Thêm sản phẩm"
+  shared:
+    product:
+      cart: "Thêm vào giỏ hàng"

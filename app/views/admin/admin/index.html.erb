@@ -1,0 +1,8 @@
+<% @products.each do |product| %>
+  <li>
+    <%= link_to product.name %>
+    <%= link_to t(".delete"), admin_product_path(product), method: :delete,
+      data:{ confirm: t(".sure")} %>
+  </li>
+<% end %>
+<%= link_to t(".new"), new_admin_product_path %>
