@@ -13,4 +13,8 @@ class ProductsController < ApplicationController
       redirect_to products_url
     end
   end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
 end

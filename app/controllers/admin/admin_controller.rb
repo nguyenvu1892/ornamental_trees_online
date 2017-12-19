@@ -1,5 +1,6 @@
 class Admin::AdminController < ApplicationController
   def index
-    @products = Product.all
+    @user = User.paginate page: params[:page]
+    @products = Product.paginate page: params[:page]
   end
 end

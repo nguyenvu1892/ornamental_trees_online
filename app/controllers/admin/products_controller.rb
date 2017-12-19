@@ -1,4 +1,10 @@
 class Admin::ProductsController < ApplicationController
+
+  def index
+    @products = Product.paginate page: params[:page]
+    # byebug
+  end
+
   def new
     @product = Product.new
   end
@@ -32,6 +38,20 @@ class Admin::ProductsController < ApplicationController
     else
       flash[:danger] = t ".danger"
       redirect_to admin_root_url
+    end
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    if @product.update_attributes(product_params)
+      flash[:success] = t "admin.products.edit.update"
+      redirect_to @product
+    else
+      render "edit"
     end
   end
 

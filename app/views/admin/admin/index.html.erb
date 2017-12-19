@@ -1,8 +1,33 @@
-<% @products.each do |product| %>
-  <li>
-    <%= link_to product.name %>
-    <%= link_to t(".delete"), admin_product_path(product), method: :delete,
-      data:{ confirm: t(".sure")} %>
-  </li>
-<% end %>
-<%= link_to t(".new"), new_admin_product_path %>
+<div class="container customize-container">
+  <div class="row"></div>
+  <div class="row">
+    <%= render "leftmenu" %>
+    <div class="col s12 m12 l9">
+      <h1 class="title-sign-up-page center cyan darken-3"><%= t ".dashboard" %></h1>
+      <table class="centered">
+        <thead>
+        <tr>
+          <th><h4><%= t ".user" %></h4></th>
+          <th><h4><%= t ".product" %></h4></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>
+            <%= link_to admin_users_path, class: "btn btn btn-lg" do %>
+              <span class="glyphicon glyphicon-log-in"></span>
+              <%= @user.count %>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to admin_products_path, class: "btn btn btn-lg" do %>
+              <span class="glyphicon glyphicon-log-in"></span>
+              <%= @products.count %>
+            <% end %></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

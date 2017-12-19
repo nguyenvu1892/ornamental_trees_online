@@ -58,18 +58,45 @@ en:
         category: "Category"
         price: "Price"
         quantity: "Quantity"
-        add: "Add product"
+        add: "Summit"
         nocategory: "Have no category"
+      edit:
+        title: "Edit Product"
+        back: "Back"
+        update: "Update Succes"
       create:
         success: "Product was added"
       destroy:
         success: "Product was deleted"
         danger: "Can't delete this product"
+      product:
+        del: "Delete"
+        edit: "Edit"
     admin:
       index:
+        dashboard: "Dashboard"
+        user: "Total Users"
+        product: "Total Product"
         delete: "Delete product"
         sure: "You sure?"
         new: "New Product"
-  shared:
-    product:
-      cart: "Add to cart"
+      leftmenu:
+        menu: "Menu"
+        user: "User"
+        product: "Product"
+        users:
+        ID: "ID"
+        name: "Name"
+        email: "Email"
+        date: "Created Date"
+        del: "Delete"
+    shared:
+      product:
+        cart: "Add to cart"
+        index:
+          id: "ID"
+          product_name: "Product Name"
+          price: "Price"
+          quantity: "Quantity"
+          detele: "Detele"
+          edit: "Edit"
