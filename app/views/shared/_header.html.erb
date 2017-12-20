@@ -39,7 +39,30 @@
               <% end %>
             </ul>
           </li>
+          <% if logged_in? %>
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to users_path do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icons-task-header-menu">account_box</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".user" %></li>
+              <% end %>
+            </ul>
+          </li>
 
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to logout_path, method: :delete do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icons-task-header-menu">exit_to_app</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".logout" %></li>
+              <% end %>
+            </ul>
+          </li>
+
+          <% else %>
           <li class="li-list-item-top-menu">
             <ul class="ul-list-item-header">
               <%= link_to signup_path do %>
@@ -50,7 +73,6 @@
               <% end %>
             </ul>
           </li>
-
           <li class="li-list-item-top-menu">
             <ul class="ul-list-item-header">
               <%= link_to login_path do %>
@@ -59,6 +81,7 @@
                 </li>
                 <li class="li-list-item-header"><%= t ".login" %></li>
               <% end %>
+          <% end %>
             </ul>
           </li>
         </ul>

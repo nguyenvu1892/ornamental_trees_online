@@ -72,24 +72,33 @@ vi:
       product:
         del: "Xóa"
         edit: "Sửa"
-      admin:
-        index:
-          dashboard: "Dashboard"
-          user: "Total Users"
-          product: "Total Product"
-          delete: "Delete product"
-          sure: "You sure?"
-          new: "New Product"
-        leftmenu:
-          menu: "Menu"
-          user: "User"
-          product: "Product"
-        users:
-          ID: "ID"
-          name: "Name"
-          email: "Email"
-          date: "Created Date"
-          del: "Delete"
+      index:
+        new: "Thêm sản phẩm"
+    users:
+      destroy:
+        success: "Xoa nguoi dung thanh cong"
+        danger: "Khong the xoa nguoi nay"
+    private:
+      logged_in:
+        pls_login: "Ban chua dang nhap"
+    admin:
+      index:
+        dashboard: "Dashboard"
+        user: "Total Users"
+        product: "Total Product"
+        delete: "Delete product"
+        sure: "You sure?"
+        new: "New Product"
+      leftmenu:
+        menu: "Menu"
+        user: "User"
+        product: "Product"
+      users:
+        ID: "ID"
+        name: "Name"
+        email: "Email"
+        date: "Created Date"
+        del: "Delete"
   shared:
     product:
       cart: "Thêm vào giỏ hàng"
@@ -100,3 +109,9 @@ vi:
         quantity: "Số lượng"
         detele: "Xóa"
         edit: "Sửa"
+    header:
+        product: "Sản phẩm"
+        signup: "Đăng ký"
+        login: "Đăng nhập"
+        user: "Tài khoản"
+        logout: "Đăng xuất"

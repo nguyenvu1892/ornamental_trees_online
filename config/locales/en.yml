@@ -72,6 +72,15 @@ en:
       product:
         del: "Delete"
         edit: "Edit"
+      index:
+        new: "New Product"
+    users:
+      destroy:
+        success: "User deleted"
+        danger: "Can't delete this user"
+    private:
+      logged_in:
+        pls_login: "Please login"
     admin:
       index:
         dashboard: "Dashboard"
@@ -89,6 +98,7 @@ en:
         name: "Name"
         email: "Email"
         date: "Created Date"
+      users:
         del: "Delete"
     shared:
       product:
@@ -100,3 +110,9 @@ en:
           quantity: "Quantity"
           detele: "Detele"
           edit: "Edit"
+      header:
+        product: "Products"
+        signup: "Sign Up"
+        login: "Login"
+        user: "User"
+        logout: "Logout"
