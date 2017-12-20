@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users
   namespace :admin do
     root "admin#index"
-    resources :users, only: [:index, :delete]
+    resources :users
     resources :products
     resources :categories
   end

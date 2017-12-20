@@ -9,12 +9,15 @@
         <th><%= t "admin.shared.product.index.product_name" %></th>
         <th><%= t "admin.shared.product.index.price" %></th>
         <th><%= t "admin.shared.product.index.quantity" %></th>
+        <th><%= t "admin.shared.product.index.category" %></th>
+
       </tr>
       </thead>
       <tbody>
       <%= render @products %>
       </tbody>
     </table>
+      <%= link_to t(".new"), new_admin_product_path, :class => "waves-effect waves-light btn" %>
   </div>
 </div>
 

@@ -3,4 +3,7 @@
   <td><%= link_to users.name, user_path(users) %></td>
   <td><%= users.email %></td>
   <td><%= users.created_at %></td>
+  <td>
+    <%= link_to (t ".del"), admin_user_path(users), method: :delete %>
+  </td>
 </tr>
