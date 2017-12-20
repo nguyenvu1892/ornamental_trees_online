@@ -27,6 +27,21 @@
   </ul>
 </div>
 
-<div class="row row-space-home-page">
+<div class="row row-space-home-page"></div>
+<div class="container" id="customize-home-container">
+  <div class="row">
+    <div class="col s12 m6 l11" id="container-products">
+      <%= form_tag(products_search_path, remote: true, method: :post) do %>
+        <div class="input-field">
+          <div class="card z-depth-1">
+            <div class="search-box-article">
+              <i class="material-icons md-36 prefix">search</i>
+              <%= text_field_tag :search_text, params[:search_text], placeholder: 'Type and ENTER for search', id: 'textbox_search' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
   <%= render "shared/product" %>
 </div>
