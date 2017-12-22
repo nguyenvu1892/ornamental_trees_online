@@ -1,16 +1,10 @@
 class ProductsController < ApplicationController
 
   def search
-    search_text = params[:search_text]
-
-    unless search_text.blank?
-      @products = Product.where('name LIKE ? OR content LIKE ? OR tags LIKE ?', "%#{search_text}%", "%#{search_text}%", "%#{search_text}%").order('created_at DESC')
+    if params[:search_text]
+      @products = Product.all.search_by_name(params[:search_text])
+                      .order_desc.paginate(page: params[:page])
     end
-
-    if @products.present?
-      @products = @products.paginate(page: params[:page], per_page: 9)
-    end
-
     respond_to do |format|
       format.js {}
     end
@@ -33,5 +27,11 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+  end
+
+  private
+
+  def product_params
+    params.require(:product).permit :name, :price, :quantity
   end
 end

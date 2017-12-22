@@ -116,3 +116,6 @@ en:
         login: "Login"
         user: "User"
         logout: "Logout"
+    static_pages:
+      home:
+        search: "Type and ENTER for search"
