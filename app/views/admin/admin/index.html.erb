@@ -3,31 +3,58 @@
   <div class="row">
     <%= render "leftmenu" %>
     <div class="col s12 m12 l9">
-      <h1 class="title-sign-up-page center cyan darken-3"><%= t ".dashboard" %></h1>
-      <table class="centered">
-        <thead>
-        <tr>
-          <th><h4><%= t ".user" %></h4></th>
-          <th><h4><%= t ".product" %></h4></th>
-        </tr>
-        </thead>
+      <ul>
+        <li class="item_category_parent">
+          <div class="title-sign-up-page center cyan darken-3"><%= t ".dashboard" %></div>
+        </li>
+      </ul>
+      <div class="col s12 m12 l9" id="content-landing-page">
+        <ul>
+          <li class="item_category_parent center">
+            <%= t ".dashboard" %>
+          </li>
+        </ul>
+        <table class="centered">
+          <thead>
+          <tr>
+            <th><h5><%= t ".user" %></h5></th>
+            <th><h5><%= t ".product" %></h5></th>
+          </tr>
+          </thead>
 
-        <tbody>
-        <tr>
-          <td>
-            <%= link_to admin_users_path, class: "btn btn btn-lg" do %>
-              <span class="glyphicon glyphicon-log-in"></span>
-              <%= @user.count %>
-            <% end %>
-          </td>
-          <td>
-            <%= link_to admin_products_path, class: "btn btn btn-lg" do %>
-              <span class="glyphicon glyphicon-log-in"></span>
-              <%= @products.count %>
-            <% end %></td>
-        </tr>
-        </tbody>
-      </table>
+          <div class="col s12 m12 l9" id="content-landing-page">
+            <ul>
+              <li class="item_category_parent center">
+                <%= t ".dashboard" %>
+              </li>
+            </ul>
+            <table class="centered">
+              <thead>
+              <tr>
+                <th><h5><%= t ".user" %></h5></th>
+                <th><h5><%= t ".product" %></h5></th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr>
+                <td>
+                  <%= link_to admin_users_path, class: "btn btn btn-lg" do %>
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    <%= @user.count %>
+                  <% end %>
+                </td>
+                <td>
+                  <%= link_to admin_products_path, class: "btn btn btn-lg" do %>
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    <%= @products.count %>
+                  <% end %></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </table>
+      </div>
     </div>
   </div>
 </div>

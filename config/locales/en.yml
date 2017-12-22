@@ -100,19 +100,22 @@ en:
         date: "Created Date"
       users:
         del: "Delete"
-    shared:
-      product:
-        cart: "Add to cart"
-        index:
-          id: "ID"
-          product_name: "Product Name"
-          price: "Price"
-          quantity: "Quantity"
-          detele: "Detele"
-          edit: "Edit"
+  shared:
+    product:
+      cart: "Add to cart"
+      index:
+        id: "ID"
+        product_name: "Product Name"
+        price: "Price"
+        quantity: "Quantity"
+        detele: "Detele"
+        edit: "Edit"
       header:
         product: "Products"
         signup: "Sign Up"
         login: "Login"
         user: "User"
         logout: "Logout"
+  static_pages:
+    home:
+      search: "Type and ENTER for search"

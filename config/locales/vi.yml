@@ -115,3 +115,6 @@ vi:
         login: "Đăng nhập"
         user: "Tài khoản"
         logout: "Đăng xuất"
+  static_pages:
+    home:
+      search: "Nhập và Enter để tìm kiếm"
