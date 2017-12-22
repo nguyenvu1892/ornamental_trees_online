@@ -100,3 +100,6 @@ en:
           quantity: "Quantity"
           detele: "Detele"
           edit: "Edit"
+    static_pages:
+      home:
+        search: "Type and ENTER for search"

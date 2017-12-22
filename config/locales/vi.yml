@@ -100,3 +100,6 @@ vi:
         quantity: "Số lượng"
         detele: "Xóa"
         edit: "Sửa"
+  static_pages:
+    home:
+      search: "Nhập và Enter để tìm kiếm"
