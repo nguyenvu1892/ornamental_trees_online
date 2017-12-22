@@ -1,8 +1,7 @@
 class Admin::ProductsController < ApplicationController
-
+  before_action :logged_in_user
   def index
     @products = Product.paginate page: params[:page]
-    # byebug
   end
 
   def new
@@ -15,7 +14,7 @@ class Admin::ProductsController < ApplicationController
       @product = @category.products.build product_params
       if @product.save
         flash[:success] = t ".success"
-        redirect_to admin_root_url
+        redirect_to admin_products_url
       else
         render :new
       end
@@ -30,10 +29,10 @@ class Admin::ProductsController < ApplicationController
     if @product.present?
       if @product.destroy
         flash[:success] = t ".success"
-        redirect_to admin_root_url
+        redirect_to admin_products_url
       else
         flash[:danger] = t ".danger"
-        redirect_to admin_root_url
+        redirect_to admin_products_url
       end
     else
       flash[:danger] = t ".danger"
@@ -42,14 +41,14 @@ class Admin::ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
+    @product = Product.find_by params[:id]
   end
 
   def update
-    @product = Product.find(params[:id])
+    @product = Product.find_by params[:id]
     if @product.update_attributes(product_params)
       flash[:success] = t "admin.products.edit.update"
-      redirect_to @product
+      redirect_to admin_products_url
     else
       render "edit"
     end
@@ -60,4 +59,11 @@ class Admin::ProductsController < ApplicationController
   def product_params
     params.require(:product).permit :name, :price, :quantity
   end
+
+  def logged_in_user
+      unless logged_in?
+        flash[:danger] = t ".pls_login"
+        redirect_to login_url
+      end
+    end
 end

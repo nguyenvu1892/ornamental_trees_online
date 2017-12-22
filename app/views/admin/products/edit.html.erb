@@ -4,6 +4,8 @@
   </div>
   <div class="card-content">
     <%= render "form"%>
-    <%= link_to (t ".back"), products_path %>
+    <div>
+      <%= link_to (t "admin.products.edit.back"), admin_products_path, :class => "waves-effect waves-light btn" %>
+    </div>
   </div>
 </div>
