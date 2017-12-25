@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post "/products/search", to: "products#search", as: :products_search
   resources :products, only: [:index, :show]
   resources :users
+  resource :shopping_cart
+  resources :order_details, only: [:create, :update, :destroy]
   namespace :admin do
     root "admin#index"
     resources :users

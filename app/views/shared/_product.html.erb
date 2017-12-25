@@ -12,12 +12,15 @@
       <% end %>
         <div class="card-action">
           <div class="row">
-            <div class="col s6 l4">
-              <%= product.price %>
-            </div>
-            <div class="col s6 l8">
-              <%= link_to t(".cart"), "#", class: "waves-effect waves-light btn" %>
-            </div>
+            <%= form_for :shopping_cart, url: shopping_cart_path, remote: true do |f| %>
+              <div class="col s6 l4">
+                <%= product.price %>
+              </div>
+              <div class="col s6 l8">
+                <%= f.hidden_field :product_id, value: product.id %>
+                <%= f.submit (t".cart"), class: "waves-effect waves-light btn" %>
+              </div>
+            <% end %>
           </div>
         </div>
         </div>

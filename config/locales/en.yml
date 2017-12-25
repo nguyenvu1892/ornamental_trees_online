@@ -119,3 +119,10 @@ en:
   static_pages:
     home:
       search: "Type and ENTER for search"
+  shopping_carts:
+    show:
+      item: "Item"
+      name: "Name"
+      quantity: "Quantity"
+      price: "Price"
+      total: "Total"
