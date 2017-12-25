@@ -8,6 +8,6 @@ class CreateProducts < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :products, [:category_id]
+    # add_index :products, [:category_id]
   end
 end
