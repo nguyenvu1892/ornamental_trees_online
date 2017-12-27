@@ -4,6 +4,9 @@
   <td><%= users.email %></td>
   <td><%= users.created_at %></td>
   <td>
-    <%= link_to (t ".del"), admin_user_path(users), method: :delete %>
+    <% if current_user.admin? && !current_user?(users) %>
+      <%= link_to (t "admin.admin.users.del"), admin_user_path(users),
+                  method: :delete, data: {confirm: (t "admin.admin.users.flash")} %>
+    <% end %>
   </td>
 </tr>
