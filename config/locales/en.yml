@@ -99,7 +99,12 @@ en:
         email: "Email"
         date: "Created Date"
       users:
+        ID: "ID"
+        name: "Name"
+        email: "Email"
+        date: "Created Date"
         del: "Delete"
+        flash: "You Sure ?"
   shared:
     product:
       cart: "Add to cart"

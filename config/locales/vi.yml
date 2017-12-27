@@ -99,6 +99,7 @@ vi:
         email: "Email"
         date: "Created Date"
         del: "Delete"
+        flash: "Bạn Có Muốn Xóa Không ?"
   shared:
     product:
       cart: "Thêm vào giỏ hàng"
