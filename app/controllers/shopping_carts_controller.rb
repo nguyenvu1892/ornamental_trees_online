@@ -1,6 +1,6 @@
 class ShoppingCartsController < ApplicationController
   def show
-    @carts = Cart.new_cart(request.session_options[:id])
+    @carts = Cart.new_cart request.session_options[:id]
   end
 
   def create
@@ -10,19 +10,19 @@ class ShoppingCartsController < ApplicationController
       cart = Cart.new cart_params
       cart.session_id = session_id
       cart.quantity = 1
-      cart.save!
+      cart.save
     else
       cart.quantity = cart.quantity + 1
-      cart.save!
+      cart.save
     end
   end
 
   def destroy
-    product_id = params[:product_id]
-    if session[:shoppingcart].key?(product_id)
-      session[:shoppingcart].delete(product_id)
-    end
-    redirect_to shopping_cart_path
+    @cart = Cart.find_by id: params[:id]
+    @cart.destroy
+     respond_to do |format|
+      format.html { redirect_to shopping_cart_path }
+     end
   end
 
   private
