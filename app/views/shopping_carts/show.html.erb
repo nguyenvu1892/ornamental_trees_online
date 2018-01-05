@@ -11,6 +11,7 @@
   <tbody>
     <%
     unless @carts.nil?
+      @total_price = 0
       @carts.each do |cart| %>
       <%
         product = cart.product
@@ -29,7 +30,8 @@
         </td>
 
         <td id="td-adj-number">
-          <%= product.price * quantity %>
+          <%= number_with_delimiter (product.price * quantity) %>
+          <% @total_price += product.price * quantity %>
         </td>
 
         <td>
@@ -44,8 +46,8 @@
         <td>&nbsp;</td>
         <td class="td-table-space-total">&nbsp;</td>
         <td class="center"><b><%= t".total"%></b></td>
-        <td class="td-table-space-total">&nbsp;</td>
-
+        <td class="td-table-space-total"><%= number_with_delimiter @total_price %></td>
+        <td></td>
       </tr>
   </tbody>
 </table>

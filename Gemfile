@@ -7,22 +7,22 @@ end
 
 gem "bcrypt", "3.1.11"
 gem "coffee-rails", "~> 4.2"
+gem "font-awesome-rails"
+gem "font-awesome-sass"
+gem "i18n", "~> 0.7.0"
 gem "jbuilder", "~> 2.5"
+gem "jquery-rails"
+gem "materialize-sass"
+gem "mysql2", ">= 0.3.18", "< 0.5"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.4"
 gem "sass-rails", "~> 5.0"
 gem "sqlite3"
+gem "therubyracer", platforms: :ruby
+gem "toastr-rails"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
-gem "i18n", "~> 0.7.0"
-gem "mysql2", ">= 0.3.18", "< 0.5"
 gem "uglifier", ">= 1.3.0"
-gem "therubyracer", platforms: :ruby
-gem "jquery-rails"
-gem "materialize-sass"
-gem "toastr-rails"
-gem "font-awesome-rails"
-gem "font-awesome-sass"
 gem "will_paginate", "~> 3.1.0"
 
 group :development, :test do
