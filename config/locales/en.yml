@@ -63,7 +63,7 @@ en:
       edit:
         title: "Edit Product"
         back: "Back"
-        update: "Update Succes"
+        update: "Update Success"
       create:
         success: "Product was added"
       destroy:
@@ -124,6 +124,8 @@ en:
   static_pages:
     home:
       search: "Type and ENTER for search"
+      price_up: "Price Up"
+      price_down: "Price Down"
   shopping_carts:
     show:
       item: "Item"

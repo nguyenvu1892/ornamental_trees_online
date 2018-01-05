@@ -119,6 +119,8 @@ vi:
   static_pages:
     home:
       search: "Nhập và Enter để tìm kiếm"
+      price_up: "Giá tăng dần"
+      price_down: "Giá giảm dần"
   shopping_carts:
     show:
       item: "San Pham"
