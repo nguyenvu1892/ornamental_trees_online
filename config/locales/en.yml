@@ -37,19 +37,6 @@ en:
   layouts:
     application:
       title: "Love Flower"
-    header:
-      product: "Products"
-      login: "Login"
-      signup: "Sign Up"
-      setting: "Account Settings"
-      history_order: "History Orders"
-      logout: "Logout"
-    footer:
-      logo: "Sun Flower"
-      connect: "Connect us"
-      about_us: "About Us"
-      help: "Help"
-      terms: "Terms of Use"
   admin:
     products:
       new:
@@ -115,12 +102,20 @@ en:
         quantity: "Quantity"
         detele: "Detele"
         edit: "Edit"
-      header:
-        product: "Products"
-        signup: "Sign Up"
-        login: "Login"
-        user: "User"
-        logout: "Logout"
+    header:
+      product: "Products"
+      signup: "Sign Up"
+      login: "Login"
+      user: "User"
+      logout: "Logout"
+      admin: "Admin"
+      home: "Home"
+    footer:
+      logo: "Sun Flower"
+      connect: "Connect us"
+      about_us: "About Us"
+      help: "Help"
+      terms: "Terms of Use"
   static_pages:
     home:
       search: "Type and ENTER for search"

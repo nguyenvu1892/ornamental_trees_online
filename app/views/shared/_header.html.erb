@@ -27,50 +27,62 @@
           </li>
 
           <% if logged_in? %>
-          <li class="li-list-item-top-menu">
-            <ul class="ul-list-item-header">
-              <%= link_to users_path do %>
-                <li class="li-list-item-header">
-                  <i class="material-icons md-24 icons-task-header-menu">account_box</i>
-                </li>
-                <li class="li-list-item-header"><%= t ".user" %></li>
-              <% end %>
-            </ul>
-          </li>
+           <% if admin? %>
+              <li class="li-list-item-top-menu">
+              <ul class="ul-list-item-header">
+                <%= link_to admin_root_path do %>
+                  <li class="li-list-item-header">
+                    <i class="material-icons md-24 icons-task-header-menu">face</i>
+                  </li>
+                  <li class="li-list-item-header"><%= t ".admin" %></li>
+                <% end %>
+              </ul>
+            </li>
+            <% end %>
 
-          <li class="li-list-item-top-menu">
-            <ul class="ul-list-item-header">
-              <%= link_to logout_path, method: :delete do %>
-                <li class="li-list-item-header">
-                  <i class="material-icons md-24 icons-task-header-menu">exit_to_app</i>
-                </li>
-                <li class="li-list-item-header"><%= t ".logout" %></li>
-              <% end %>
-            </ul>
-          </li>
+            <li class="li-list-item-top-menu">
+              <ul class="ul-list-item-header">
+                <%= link_to users_path do %>
+                  <li class="li-list-item-header">
+                    <i class="material-icons md-24 icons-task-header-menu">account_box</i>
+                  </li>
+                  <li class="li-list-item-header"><%= t ".user" %></li>
+                <% end %>
+              </ul>
+            </li>
 
+            <li class="li-list-item-top-menu">
+              <ul class="ul-list-item-header">
+                <%= link_to logout_path, method: :delete do %>
+                  <li class="li-list-item-header">
+                    <i class="material-icons md-24 icons-task-header-menu">exit_to_app</i>
+                  </li>
+                  <li class="li-list-item-header"><%= t ".logout" %></li>
+                <% end %>
+              </ul>
+            </li>
           <% else %>
-          <li class="li-list-item-top-menu">
-            <ul class="ul-list-item-header">
-              <%= link_to signup_path do %>
-                <li class="li-list-item-header">
-                  <i class="material-icons md-24 icons-task-header-menu">person_add</i>
-                </li>
-                <li class="li-list-item-header"><%= t ".signup" %></li>
-              <% end %>
-            </ul>
-          </li>
-          <li class="li-list-item-top-menu">
-            <ul class="ul-list-item-header">
-              <%= link_to login_path do %>
-                <li class="li-list-item-header">
-                  <i class="material-icons md-24 icons-task-header-menu">lock</i>
-                </li>
-                <li class="li-list-item-header"><%= t ".login" %></li>
-              <% end %>
+            <li class="li-list-item-top-menu">
+              <ul class="ul-list-item-header">
+                <%= link_to signup_path do %>
+                  <li class="li-list-item-header">
+                    <i class="material-icons md-24 icons-task-header-menu">person_add</i>
+                  </li>
+                  <li class="li-list-item-header"><%= t ".signup" %></li>
+                <% end %>
+              </ul>
+            </li>
+            <li class="li-list-item-top-menu">
+              <ul class="ul-list-item-header">
+                <%= link_to login_path do %>
+                  <li class="li-list-item-header">
+                    <i class="material-icons md-24 icons-task-header-menu">lock</i>
+                  </li>
+                  <li class="li-list-item-header"><%= t ".login" %></li>
+                <% end %>
+              </ul>
+            </li>
           <% end %>
-            </ul>
-          </li>
         </ul>
       </div>
     </div>
