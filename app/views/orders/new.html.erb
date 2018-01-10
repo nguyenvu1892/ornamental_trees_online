@@ -1,0 +1,40 @@
+<h2>Order</h2>
+<%= form_for @order do |f| %>
+  <div class="col s12 m6 l6">
+    <div>
+      <h4><%= t ".receiver" %></h4>
+      <%= f.label :receving_name, (t ".receving_name") %>
+      <%= f.text_field :receving_name %>
+
+      <%= f.label :receving_phonenumber, (t ".receving_phonenumber") %>
+      <%= f.text_field :receving_phonenumber%>
+
+      <%= f.label :receving_address, (t ".address") %>
+      <%= f.text_field :receving_address %>
+
+      <%= f.label :datetime_receiv, (t ".datetime") %>
+      <%#= f.datetime_select :datetime_receiv, :written_on, default: 1.days.from_now %>
+    </div>
+  </div>
+  <div class="col s12 m6 l6">
+    <%= f.fields_for :order_details, @order.order_details do |od| %>
+      <div>
+        <%= od.object.product.name %>
+        <%= od.hidden_field :product_id %>
+
+        <%= od.label :quantity, (t ".quantity") %>
+        <div class="quantity">
+          <%= od.collection_select :quantity, (1..10), :to_s, :to_s%>
+        </div>
+
+        <%= od.label :price, (t ".price") %>
+        <%= od.object.product.price %>
+        <%= hidden_field_tag :price, od.object.product.price, class: "price" %>
+
+      </div>
+    <% end %>
+    <div id="total">
+    </div>
+  <%= f.submit (t ".purchase"), class: "btn" %>
+  </div>
+<% end %>
