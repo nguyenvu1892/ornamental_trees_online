@@ -41,11 +41,11 @@ class Admin::ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find_by params[:id]
+    @product = Product.find_by id: params[:id]
   end
 
   def update
-    @product = Product.find_by params[:id]
+    @product = Product.find_by id: params[:id]
     if @product.update_attributes(product_params)
       flash[:success] = t "admin.products.edit.update"
       redirect_to admin_products_url

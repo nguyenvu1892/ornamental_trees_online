@@ -126,3 +126,7 @@ vi:
       quantity: "So Luong"
       price: "Gia"
       total: "Thanh Tien"
+  orders:
+    destroy:
+      success: "Huy don hang"
+      danger: "Khong the huy don hang"

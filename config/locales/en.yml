@@ -126,3 +126,7 @@ en:
       quantity: "Quantity"
       price: "Price"
       total: "Total price"
+  orders:
+    destroy:
+      success: "Cancel order"
+      danger: "Can't cancel this order"
