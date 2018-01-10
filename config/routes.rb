@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users
   resource  :shopping_cart
   resources :order_details, only: [:create, :update, :destroy]
+  resources :orders
   namespace :admin do
     root "admin#index"
     resources :users
