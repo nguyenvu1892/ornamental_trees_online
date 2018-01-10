@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get    "/login",    to: "sessions#new"
   post    "/login",   to: "sessions#create"
   delete  "/logout",  to: "sessions#destroy"
-  post "/products/search", to: "products#search", as: :products_search
   resources :products, only: [:index, :show]
   resources :users
   resource  :shopping_cart

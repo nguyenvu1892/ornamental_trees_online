@@ -1,4 +1,3 @@
-<h2><%= t ".title" %></h2>
 <%= form_for [:admin, @product] do |f| %>
   <%= f.label :name, t("admin.products.new.name") %>
   <%= f.text_field :name, placeholder: t("admin.products.new.name") %>

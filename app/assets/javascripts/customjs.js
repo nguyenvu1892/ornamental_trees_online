@@ -1,11 +1,10 @@
 //*Static_Pages
 
 $(document).ready(function () {
-    $('.slider').slider({height: 720});
+    $(".slider").slider({height: 720});
 });
 
 //*Signup
-
 
 var submitInvisibleRecaptchaForm = function () {
     document.getElementById("new_user").submit();
@@ -164,3 +163,31 @@ $(document).ready(function () {
 
     $("#user_password_confirmation").keyup(checkPasswordMatch);
 });
+
+//* Selector
+
+// $(document).ready(function() {
+//     $("select").material_select();
+//     $('#_up').click(function(e) {
+//         e.preventDefault();
+//         var search_text = $('input[name="search_text"]');
+//         $.ajax({
+//             url: '/products/sort/price-up',
+//             data: {'search_text': $(search_text).val()},
+//             dataType: 'script'
+//         });
+//     });
+// });
+
+// $(document).ready(function() {
+//     $("select").material_select();
+//     $('#_down').click(function(e) {
+//         e.preventDefault();
+//         var search_text = $('input[name="search_text"]');
+//         $.ajax({
+//             url: '/products/sort/price-down',
+//             data: {'search_text': $(search_text).val()},
+//             dataType: 'script'
+//         });
+//     });
+// });

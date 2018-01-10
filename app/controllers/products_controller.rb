@@ -1,17 +1,15 @@
 class ProductsController < ApplicationController
 
-  def search
-    if params[:search_text]
+  def index
+    if params[:search_text].present?
       @products = Product.all.search_by_name(params[:search_text])
                       .order_desc.paginate(page: params[:page])
+    else
+      @products = Product.select(:id, :name, :price, :quantity).paginate page: params[:page]
     end
     respond_to do |format|
       format.js {}
     end
-  end
-
-  def index
-    @products = Product.select(:id, :name, :price, :quantity).paginate page: params[:page]
   end
 
   def show
@@ -23,10 +21,6 @@ class ProductsController < ApplicationController
       flash[:danger] = "Product not found"
       redirect_to products_url
     end
-  end
-
-  def edit
-    @product = Product.find(params[:id])
   end
 
   private

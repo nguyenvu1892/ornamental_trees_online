@@ -48,7 +48,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find_by id: params[:id]
     if @product.update_attributes(product_params)
       flash[:success] = t "admin.products.edit.update"
-      redirect_to admin_products_url
+      redirect_to @product
     else
       render "edit"
     end
