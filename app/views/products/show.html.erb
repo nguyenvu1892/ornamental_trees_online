@@ -29,10 +29,8 @@
 </div>
 <div class="row">
   <div class="card medium">
-    <% @product.images.each do |img|  %>
-      <div class="col s12 l3">
-        <%= image_tag("#{img.image_link}", class: "img-size") %>
+      <div class="col s10 l2">
+        <%= image_tag @product.image %>
       </div>
-    <% end %>
   </div>
 </div>

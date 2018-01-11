@@ -19,6 +19,7 @@
       %>
       <tr>
         <td id="td-table-image-item">
+        <%= image_tag product.image, class: "thumbnail-image-line-item-cart" %>
         </td>
 
         <td>
@@ -29,7 +30,7 @@
           <%= quantity %>
         </td>
 
-        <td id="td-adj-number">
+        <td>
           <%= number_with_delimiter (product.price * quantity) %>
           <% @total_price += product.price * quantity %>
         </td>
