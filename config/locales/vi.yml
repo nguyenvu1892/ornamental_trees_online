@@ -1,5 +1,11 @@
 vi:
   users:
+    show:
+      confirm: "Chua cac nhan"
+      accepted: "Da xac nhan"
+      cancel: "Huy don hang"
+      shipping: "Dang giao hang"
+      received: "Da nhan"
     new:
       username: "Tên đăng nhập"
       email: "Email"
@@ -134,6 +140,7 @@ vi:
       success: "Huy don hang"
       danger: "Khong the huy don hang"
     new:
+      new-order: "Dat hang"
       receving_name: "Nguoi nhan"
       receving_phonenumber: "So dien thoai"
       number: "0123456789"

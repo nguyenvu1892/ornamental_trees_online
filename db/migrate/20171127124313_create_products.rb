@@ -5,9 +5,9 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.references :category, foreign_key: true
       t.float :price
       t.integer :quantity
+      t.string :image
 
       t.timestamps
     end
-    # add_index :products, [:category_id]
   end
 end

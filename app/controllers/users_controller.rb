@@ -3,6 +3,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    @user = User.find_by id: params[:id]
+    @orders = @user.orders
+  end
+
   def create
     @user = User.new user_params
 

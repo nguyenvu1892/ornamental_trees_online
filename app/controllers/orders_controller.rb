@@ -21,13 +21,17 @@ class OrdersController < ApplicationController
       redirect_to login_path
     end
   end
+
+  def show
+    @order = Order.find_by id: params[:id]
+  end
   
   def destroy
     @order = Order.find_by id: params[:id]
     if @order.present?
       @order.destroy
       flash[:success] = t ".success"
-      redirect_to order_url
+      redirect_to user_url(current_user)
     else
       flash[:danger] = t ".danger"
       redirect_to root_url
@@ -36,7 +40,8 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:receving_name, :receving_phonenumber, :receving_address,
+    params.require(:order).permit(:receving_name, :receving_phonenumber,
+                                  :receving_address, :status,
                                    order_details_attributes: [:product_id, :quantity])
   end
 end
