@@ -134,6 +134,7 @@ vi:
       success: "Huy don hang"
       danger: "Khong the huy don hang"
     new:
+      new-order: "Dat hang"
       receving_name: "Nguoi nhan"
       receving_phonenumber: "So dien thoai"
       number: "0123456789"
