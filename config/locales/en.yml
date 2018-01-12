@@ -128,7 +128,18 @@ en:
       quantity: "Quantity"
       price: "Price"
       total: "Total price"
+      order: "Order"
   orders:
     destroy:
       success: "Cancel order"
       danger: "Can't cancel this order"
+    new:
+      receving_name: "Receiver"
+      receving_phonenumber: "Phone number"
+      number: "0123456789"
+      datetime: "Datetime"
+      product_name: "Product Name"
+      quantity: "Quantity"
+      price: "Price"
+      total: "Total monney"
+      purchase: "Purchase"

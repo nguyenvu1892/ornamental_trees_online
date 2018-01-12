@@ -128,7 +128,18 @@ vi:
       quantity: "So Luong"
       price: "Gia"
       total: "Thanh Tien"
+      order: "Mua ngay"
   orders:
     destroy:
       success: "Huy don hang"
       danger: "Khong the huy don hang"
+    new:
+      receving_name: "Nguoi nhan"
+      receving_phonenumber: "So dien thoai"
+      number: "0123456789"
+      datetime: "Thoi gian"
+      product_name: "Ten san pham"
+      quantity: "So luong"
+      price: "Gia"
+      total: "Tong tien"
+      purchase: "Mua"
