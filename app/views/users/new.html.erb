@@ -5,16 +5,16 @@
     <div class="col s12 m12 l4 center">
       <div class="card-panel">
         <div class="row s12">
-          <a class="btn red darken-1" href="#"><i class="fa fa-google-plus"></i>&nbsp; &nbsp; <%= t ".login_google" %>
+          <a class="btn red darken-1" href="#"><i class="fa fa-google-plus"></i>&nbsp; &nbsp; <%= t "sessions.new.login_google" %>
           </a>
         </div>
         <div class="row s12">
-          <a class="btn blue darken-4" href="#"><i class="fa fa-facebook"></i>&nbsp; &nbsp; <%= t ".login_facebook" %>
+          <a class="btn blue darken-4 login_via_face"><i class="fa fa-facebook"></i>&nbsp; &nbsp; <%= t "sessions.new.login_facebook" %>
           </a>
         </div>
 
         <div class="row s12">
-          <a class="btn cyan darken-1" href="#"><i class="fa fa-twitter"></i>&nbsp; &nbsp; <%= t ".login_twiiter" %> &nbsp; &nbsp;</a>
+          <a class="btn cyan darken-1" href="#"><i class="fa fa-twitter"></i>&nbsp; &nbsp; <%= t "sessions.new.login_twiiter" %> &nbsp; &nbsp;</a>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
               <div class="row">
                 <div class="input-field col s12 sign-up-fields">
                   <i class="material-icons md-36 prefix icon-account-material">account_circle</i>
-                  <%= f.text_field :username, class: "validate", placeholder: (t ".username"), type:"text" %>
+                  <%= f.text_field :username, class: "validate", placeholder: (t ".username"), type: "text" %>
                 </div>
               </div>
 
@@ -97,8 +97,8 @@
               </div>
             </div>
           <% end %>
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>

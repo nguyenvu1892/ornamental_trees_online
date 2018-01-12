@@ -24,6 +24,8 @@ vi:
       login_google: "Log in with Google"
       login_facebook: "Log in with Facebook"
       login_twiiter: "Log in with Twiiter"
+      login_fail: "Đăng nhập thất bại"
+      forgot_pass: "Quên mật khẩu"
     create:
       danger: "email / mật khẩu không hợp lệ"
   products:

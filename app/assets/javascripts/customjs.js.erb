@@ -164,30 +164,52 @@ $(document).ready(function () {
     $("#user_password_confirmation").keyup(checkPasswordMatch);
 });
 
-//* Selector
+$(document).ready(function () {
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1747687288588976',
+            cookie: true,
+            xfbml: true,
+            version: 'v2.11'
+        });
 
-// $(document).ready(function() {
-//     $("select").material_select();
-//     $('#_up').click(function(e) {
-//         e.preventDefault();
-//         var search_text = $('input[name="search_text"]');
-//         $.ajax({
-//             url: '/products/sort/price-up',
-//             data: {'search_text': $(search_text).val()},
-//             dataType: 'script'
-//         });
-//     });
-// });
+        FB.AppEvents.logPageView();
 
-// $(document).ready(function() {
-//     $("select").material_select();
-//     $('#_down').click(function(e) {
-//         e.preventDefault();
-//         var search_text = $('input[name="search_text"]');
-//         $.ajax({
-//             url: '/products/sort/price-down',
-//             data: {'search_text': $(search_text).val()},
-//             dataType: 'script'
-//         });
-//     });
-// });
+        $('.login_via_face').on('click', function () {
+            FB.login(function (response) {
+                if (response.authResponse) {
+                    if (response.status === 'connected') {
+                        $.ajax({
+                            method: 'GET',
+                            url: '/auth/facebook/callback',
+                            data: response,
+                            dataType: 'json'
+                        }).success(function (data) {
+                            if (data.status == "success") {
+                                location.href = 'http://localhost:3000/';
+                            } else {
+                                alert('<%= t "sessions.new.login_fail" %>');
+                            }
+                        }).error(function () {
+                            alert('<%= t "sessions.new.login_fail" %>');
+                        })
+                    }
+                } else {
+                    myWindow = window.open("http://localhost:3000/auth/facebook"
+                        , "_blank", "width=500,height=500");
+                }
+            });
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+});
