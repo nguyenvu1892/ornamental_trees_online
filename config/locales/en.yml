@@ -134,6 +134,7 @@ en:
       success: "Cancel order"
       danger: "Can't cancel this order"
     new:
+      new-order: "Order"
       receving_name: "Receiver"
       receving_phonenumber: "Phone number"
       number: "0123456789"
