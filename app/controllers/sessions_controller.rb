@@ -3,24 +3,39 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by email: params[:session][:email].downcase
-    if user && user.authenticate(params[:session][:password])
-      log_in user
-      if user.admin?
-        redirect_to admin_root_url
-        flash[:admin] = t ".admin"
+    auth = request.env["omniauth.auth"]
+    if auth.present?
+      user = User.from_omniauth(auth)
+      if user
+        render json: {
+            status: :success
+        }
+        log_in user
       else
-        redirect_to root_url
-        flash[:user] = t ".user"
+        render json: {
+            status: :error
+        }
       end
     else
-      flash.now[:danger] = t ".danger"
-      render :new
+      user = User.find_by email: params[:session][:email].downcase
+      if user && user.authenticate(params[:session][:password])
+        log_in user
+        if user.admin?
+          redirect_to admin_root_url
+          flash[:admin] = t ".admin"
+        else
+          redirect_to root_url
+          flash[:user] = t ".user"
+        end
+      else
+        flash.now[:danger] = t ".danger"
+        render :new
+      end
     end
   end
 
   def destroy
-    log_out
+    session[:user_id] = nil
     redirect_to root_url
   end
 end

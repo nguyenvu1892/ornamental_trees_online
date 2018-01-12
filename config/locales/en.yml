@@ -24,6 +24,8 @@ en:
       login_google: "Log in with Google"
       login_facebook: "Log in with Facebook"
       login_twiiter: "Log in with Twiiter"
+      login_fail: "Login Fail"
+      forgot_pass: "Forgot Password"
     create:
       danger: "invalid email/password combination"
   products:

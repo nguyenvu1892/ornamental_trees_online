@@ -5,16 +5,16 @@
     <div class="col s12 m12 l4 center">
       <div class="card-panel">
         <div class="row s12">
-          <a class="btn red darken-1" href="/auth/google_oauth2"><i class="fa fa-google-plus"></i>&nbsp; &nbsp;<%= t ".login_google" %>
+          <a class="btn red darken-1"><i class="fa fa-google-plus"></i>&nbsp; &nbsp;<%= t ".login_google" %>
           </a>
         </div>
         <div class="row s12">
-          <a class="btn blue darken-4" href="/auth/facebook"><i class="fa fa-facebook"></i>&nbsp; &nbsp; <%= t ".login_facebook" %>
+          <a class="btn blue darken-4 login_via_face"><i class="fa fa-facebook"></i>&nbsp; &nbsp; <%= t ".login_facebook" %>
           </a>
         </div>
 
         <div class="row s12">
-          <a class="btn cyan darken-1" href="/auth/twitter"><i class="fa fa-twitter"></i>&nbsp; &nbsp; <%= t ".login_twiiter" %> &nbsp; &nbsp;</a>
+          <a class="btn cyan darken-1"><i class="fa fa-twitter"></i>&nbsp; &nbsp; <%= t ".login_twiiter" %> &nbsp; &nbsp;</a>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
             </div>
             <div class="row center">
               <div class="input-field col s12">
-                Or <a href="#">Forgot Password</a>
+                Or <a href="#"><%= t ".forgot_pass" %></a>
               </div>
             </div>
             <div class="row center">
