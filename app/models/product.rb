@@ -5,11 +5,22 @@ class Product < ApplicationRecord
   has_many :images
   has_many :carts
 
+  mount_uploader :image, ImagesUploader
+
   validates :name, presence: true
+  validate  :image_size
 
   scope :search_by_name, (lambda do |name|
     where('name LIKE ? OR price LIKE ?', "%#{name}%","%#{name}%")
   end)
 
   scope :order_desc, -> {order created_at: :desc}
+
+  private
+
+  def image_size
+    if image.size > 5.megabytes
+      errors.add(:image, "should be less than 5MB")
+    end
+  end
 end

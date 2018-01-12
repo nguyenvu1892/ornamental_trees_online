@@ -1,7 +1,7 @@
 class Admin::ProductsController < ApplicationController
   before_action :logged_in_user
   def index
-    @products = Product.paginate page: params[:page]
+    @products = Product.select(:id, :name, :price, :quantity, :image, :category_id).paginate page: params[:page]
   end
 
   def new
@@ -57,7 +57,7 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit :name, :price, :quantity
+    params.require(:product).permit :name, :price, :quantity, :image
   end
 
   def logged_in_user
