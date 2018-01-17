@@ -146,3 +146,12 @@ vi:
       price: "Gia"
       total: "Tong tien"
       purchase: "Mua"
+  comments:
+    comment:
+      delete: "Xoa comment"
+    destroy:
+      confirm: "Xoa comment?"
+      success: "Da xoa comment"
+      fail: "Xay ra loi"
+    form:
+      add: "Them nhan xet"

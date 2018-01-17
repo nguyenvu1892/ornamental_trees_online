@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171127130050) do
+ActiveRecord::Schema.define(version: 20180115093503) do
 
   create_table "carts", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "session_id"
     t.integer "product_id"
     t.integer "quantity"
     t.float "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "session_id"
     t.index ["product_id"], name: "index_carts_on_product_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20171127130050) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_comments_on_product_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -53,7 +63,6 @@ ActiveRecord::Schema.define(version: 20171127130050) do
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.string "receving_name"
-    t.string "receving_phonenumber"
     t.string "receving_address"
     t.integer "status"
     t.datetime "created_at", null: false
@@ -66,9 +75,9 @@ ActiveRecord::Schema.define(version: 20171127130050) do
     t.integer "category_id"
     t.float "price"
     t.integer "quantity"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 

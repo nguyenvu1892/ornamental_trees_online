@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :orders
   has_many :reviews
   has_many :carts
+  has_many :comments
   has_secure_password
   validates :password, presence: true, length: {minimum: 6}, allow_blank: true
 

@@ -188,10 +188,12 @@ $(document).ready(function () {
                             if (data.status == "success") {
                                 location.href = 'http://localhost:3000/';
                             } else {
-                                alert('<%= t "sessions.new.login_fail" %>');
+                                alert('<%= I18n.t ("sessions.new.login_fail") %>');
                             }
                         }).error(function () {
-                            alert('<%= t "sessions.new.login_fail" %>');
+                            alert('<%= I18n.t "sessions.new.login_fail" %>');
+                            }
+                        }).error(function () {
                         })
                     }
                 } else {
@@ -213,3 +215,22 @@ $(document).ready(function () {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 });
+
+$(document).ready(function () {
+    $('#_up').click(function () {
+        _up();
+        return false;
+    });
+    $('#_down').click(function () {
+        _down();
+        return false;
+    });
+});
+function _up() {
+    $('#_sort').val(1);
+    $('#_search_product').submit();
+}
+function _down() {
+    $('#_sort').val(2);
+    $('#_search_product').submit();
+}

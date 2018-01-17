@@ -28,6 +28,7 @@ gem "carrierwave", "1.2.2"
 gem "omniauth", "~> 1.7", ">= 1.7.1"
 gem "omniauth-google-oauth2", "~> 0.5.2"
 gem "omniauth-facebook", "~> 4.0"
+gem "mini_magick", "4.7.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
