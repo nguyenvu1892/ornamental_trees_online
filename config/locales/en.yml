@@ -153,3 +153,12 @@ en:
       price: "Price"
       total: "Total monney"
       purchase: "Purchase"
+  comments:
+    comment:
+      delete: "Delete comment"
+    destroy:
+      confirm: "You sure?"
+      success: "Deleted comment"
+      fail: "Error"
+    form:
+      add: "Add comment"

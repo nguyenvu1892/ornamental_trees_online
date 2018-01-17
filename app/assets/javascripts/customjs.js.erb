@@ -188,10 +188,12 @@ $(document).ready(function () {
                             if (data.status == "success") {
                                 location.href = 'http://localhost:3000/';
                             } else {
-                                alert(<%= t "sessions.new.login_fail"  %>);
+                                alert('<%= I18n.t ("sessions.new.login_fail") %>');
                             }
                         }).error(function () {
-                            alert(<%= t "sessions.new.login_fail"  %>);
+                            alert('<%= I18n.t "sessions.new.login_fail" %>');
+                            }
+                        }).error(function () {
                         })
                     }
                 } else {

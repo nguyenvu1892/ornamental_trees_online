@@ -1,0 +1,17 @@
+<div id="comment-<%= comment.id %>">
+  <div class="chip">
+    <%= comment.user.name %>
+  </div>
+  <div class="card-panel grey lighten-5 z-depth-1">
+    <div class="row valign-wrapper">
+      <div class="col s10">
+        <span class="black-text">
+          <%= comment.content %>
+        <% if current_user?(comment.user) %>
+          <%= link_to I18n.t("comments.comment.delete"), "#", onclick: "delete_comment(event, this)", id: comment.id %>
+        <% end %>
+       </span>
+      </div>
+    </div>
+  </div>
+</div>

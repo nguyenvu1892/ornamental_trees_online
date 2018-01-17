@@ -10,14 +10,11 @@ class ProductsController < ApplicationController
       @products = Product.search_by_name(params[:search_text])
                       .order_desc.paginate(page: params[:page])
     end
-    respond_to do |format|
-      format.js {}
-    end
   end
 
   def show
     @product = Product.find_by id: params[:id]
-
+    @comments = @product.comments.paginate page: params[:page]
     if @product
       flash[:success] = t "admin.products.destroy.success"
     else
