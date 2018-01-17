@@ -1,5 +1,11 @@
 en:
   users:
+    show:
+      confirm: "Wait confirm"
+      accepted: "Accepted"
+      cancel: "Cancel"
+      shipping: "Shipping"
+      received: "Received"
     new:
       username: "Username"
       email: "Email"
@@ -64,6 +70,7 @@ en:
       index:
         new: "New Product"
     users:
+
       destroy:
         success: "User deleted"
         danger: "Can't delete this user"

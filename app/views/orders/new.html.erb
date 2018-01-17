@@ -13,7 +13,6 @@
       <%= f.text_field :receving_address %>
 
       <%= f.label :datetime_receiv, (t ".datetime") %>
-      <%#= f.datetime_select :datetime_receiv, :written_on, default: 1.days.from_now %>
     </div>
   </div>
   <div class="col s12 m6 l6">
@@ -28,9 +27,9 @@
         </div>
 
         <%= od.label :price, (t ".price") %>
-        <%= od.object.product.price %>
-        <%= hidden_field_tag :price, od.object.product.price, class: "price" %>
-
+        <div class="price">
+          <%= od.object.product.price  %>
+        </div>
       </div>
     <% end %>
     <div id="total">

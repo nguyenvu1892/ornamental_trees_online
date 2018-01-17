@@ -42,9 +42,9 @@
       </div>
       <div class="col s12 m6 l3">
         <%= link_to '<i class="material-icons md-72">arrow_drop_up</i>&nbsp;'.html_safe, "",
-                    {title: t "static_pages.home.price_up", id: "_up"} %>
+                    {title: (t "static_pages.home.price_up"), id: "_up"} %>
         <%= link_to '<i class="material-icons md-72">arrow_drop_down</i>&nbsp;'.html_safe, "",
-                    {title: t "static_pages.home.price_down", id: "_down"} %>
+                    {title: (t "static_pages.home.price_down"), id: "_down"} %>
         <%= hidden_field_tag :sort_product, (params[:sort_product].nil? ? "0" : params[:sort_product]), id: "_sort" %>
       </div>
     <% end %>

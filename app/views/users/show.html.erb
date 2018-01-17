@@ -17,5 +17,26 @@
     </div>
   </div>
   <div class="col s12 l6">
+    <% @orders.each do |order| %>
+      <%= link_to order_path(order) do %>
+        <div class="">
+          <%= order.receving_name %>
+          <%= order.receving_address %>
+        </div>
+      <% end %>
+      <div class="">
+        <% if order.accepted? %>
+          <%= label_tag "status", (t ".accepted") %>
+          <%= link_to (t ".cancel"), order_path(order), method: :delete %>
+        <% elsif order.wait? %>
+          <%= label_tag "status", (t ".comfirm") %>
+          <%= link_to (t ".cancel"), order_path(order), method: :delete %>
+        <% elsif order.shipping? %>
+          <%= label_tag "status", (t ".shipping") %>
+        <% elsif order.received? %>
+          <%= label_tag "status", (t ".received") %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>

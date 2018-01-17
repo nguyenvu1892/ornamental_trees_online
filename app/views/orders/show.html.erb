@@ -1,0 +1,42 @@
+<div class="col l6 s12">
+  <div class="">
+    <%= @order.receving_name %>
+  </div>
+  <div>
+    <%= @order.receving_phonenumber %>
+  </div>
+  <div>
+    <%= @order.receving_address %>
+  </div>
+  <div>
+    <%= @order.status %>
+  </div>
+</div>
+<div class="col l6 s12">
+  <table>
+    <thead>
+      <tr>
+        <th class="mail-order-th" id="th-table-item-title"><%= t ".item"%></th>
+        <th class="mail-order-th-name"><%= t ".productname"%></th>
+        <th class="center mail-order-th"><%= t ".quantity"%></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order.order_details.each do |od| %>
+        <tr>
+          <td id="td-table-image-item">
+            <%= image_tag od.product.image, class: "thumbnail-image-line-item-cart" %>
+          </td>
+
+          <td>
+            <%= od.product.name %>
+          </td>
+
+          <td class="center">
+            <%= od.quantity %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
