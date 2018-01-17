@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     quantity = $(".quantity select");
     for (var i = 0; i < price.length; i++){
-      totalPrice += parseFloat(price.val()) * parseFloat(quantity.val())
+      totalPrice += parseFloat(price.text()) * parseFloat(quantity.val());
     }
     $("#total").html(totalPrice);
     $("#total").append(" $"); 

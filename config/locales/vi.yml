@@ -1,5 +1,11 @@
 vi:
   users:
+    show:
+      confirm: "Chua cac nhan"
+      accepted: "Da xac nhan"
+      cancel: "Huy don hang"
+      shipping: "Dang giao hang"
+      received: "Da nhan"
     new:
       username: "Tên đăng nhập"
       email: "Email"
