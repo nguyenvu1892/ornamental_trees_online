@@ -2,15 +2,15 @@
   <nav class="cyan z-depth-2" id="nav-header-enziin">
     <div class="container" id="customize-home-container">
       <div class="nav-wrapper">
-        <%= link_to image_tag('logo.png'), shopping_cart_path, class: "brand-logo" %>
+        <%= link_to image_tag('logo.png'), root_path, class: "brand-logo" %>
         <ul class="right hide-on-med-and-down">
           <li class="li-list-item-top-menu">
             <ul class="ul-list-item-header">
-              <%= link_to root_path do %>
+              <%= link_to shopping_cart_path do %>
                 <li class="li-list-item-header">
-                  <i class="material-icons md-24 icons-task-header-menu">home</i>
+                  <i class="material-icons md-24 icons-task-header-menu">add_shopping_cart</i>
                 </li>
-                <li class="li-list-item-header"><%= t ".home" %></li>
+                <li class="li-list-item-header"><%= t "shared.product.shop_cart" %></li>
               <% end %>
             </ul>
           </li>
@@ -27,17 +27,17 @@
           </li>
 
           <% if logged_in? %>
-           <% if admin? %>
+            <% if admin? %>
               <li class="li-list-item-top-menu">
-              <ul class="ul-list-item-header">
-                <%= link_to admin_root_path do %>
-                  <li class="li-list-item-header">
-                    <i class="material-icons md-24 icons-task-header-menu">face</i>
-                  </li>
-                  <li class="li-list-item-header"><%= t ".admin" %></li>
-                <% end %>
-              </ul>
-            </li>
+                <ul class="ul-list-item-header">
+                  <%= link_to admin_root_path do %>
+                    <li class="li-list-item-header">
+                      <i class="material-icons md-24 icons-task-header-menu">face</i>
+                    </li>
+                    <li class="li-list-item-header"><%= t ".admin" %></li>
+                  <% end %>
+                </ul>
+              </li>
             <% end %>
 
             <li class="li-list-item-top-menu">
