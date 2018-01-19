@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :users
     resources :products
     resources :categories
+    resources :orders
   end
 
   root "static_pages#home"

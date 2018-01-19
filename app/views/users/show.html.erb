@@ -25,16 +25,9 @@
         </div>
       <% end %>
       <div class="">
-        <% if order.accepted? %>
-          <%= label_tag "status", (t ".accepted") %>
+        <%= label_tag "status", order.isstatus %>
+        <% if order.accepted? || order.wait? %>
           <%= link_to (t ".cancel"), order_path(order), method: :delete %>
-        <% elsif order.wait? %>
-          <%= label_tag "status", (t ".comfirm") %>
-          <%= link_to (t ".cancel"), order_path(order), method: :delete %>
-        <% elsif order.shipping? %>
-          <%= label_tag "status", (t ".shipping") %>
-        <% elsif order.received? %>
-          <%= label_tag "status", (t ".received") %>
         <% end %>
       </div>
     <% end %>
