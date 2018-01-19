@@ -1,0 +1,21 @@
+<div class="row"></div>
+<div class="row">
+  <%= render "admin/admin/leftmenu" %>
+  <div class="col s12 m12 l9 home">
+    <table class="highlight">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th><%= t ".buyer" %></th>
+        <th><%= t ".receiver" %></th>
+        <th><%= t ".phone" %></th>
+        <th><%= t ".address" %></th>
+        <th><%= t ".status" %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @orders %>
+      </tbody>
+    </table>
+  </div>
+</div>

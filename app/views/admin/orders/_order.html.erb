@@ -1,0 +1,11 @@
+<tr>
+  <td><%= order.id %></td>
+  <td><%= order.user.name %></td>
+  <td><%= order.receving_name %></td>
+  <td><%= order.receving_phonenumber %></td>
+  <td><%= order.receving_address %></td>
+  <td><%= order.isstatus %></td>
+  <td>
+    <%= link_to (t ".delete"), admin_order_path(order), method: :delete %>
+  </td>
+</tr>

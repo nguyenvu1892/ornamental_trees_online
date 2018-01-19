@@ -28,4 +28,16 @@ class Order < ApplicationRecord
   def received?
   	self.status == RECEIVED
   end
+
+  def isstatus
+    if self.status == WAIT
+      return (I18n.t "users.show.comfirm")
+    elsif self.status == ACCEPTED
+      return (I18n.t "users.show.accepted")
+    elsif self.status == SHIPPING
+      return (I18n.t "users.show.shipping")
+    elsif self.status == RECEIVED
+      return (I18n.t "users.show.received")
+    end
+  end
 end

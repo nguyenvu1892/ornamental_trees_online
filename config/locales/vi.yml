@@ -1,7 +1,7 @@
 vi:
   users:
     show:
-      confirm: "Chua cac nhan"
+      comfirm: "Chua cac nhan"
       accepted: "Da xac nhan"
       cancel: "Huy don hang"
       shipping: "Dang giao hang"
@@ -59,6 +59,13 @@ vi:
       help: "Ho Tro"
       terms: "Terms of Use"
   admin:
+    orders:
+      index:
+        buyer: "Nguoi mua"
+        receiver: "Nguoi nhan"
+        phone: "SDT nguoi nhan"
+        address: "Dia chi"
+        status: "Tinh trang"
     products:
       new:
         title: "Thêm sản phẩm"
@@ -98,6 +105,7 @@ vi:
         sure: "You sure?"
         new: "New Product"
       leftmenu:
+        orders: "Orders"
         menu: "Menu"
         user: "User"
         product: "Product"

@@ -1,7 +1,7 @@
 en:
   users:
     show:
-      confirm: "Wait confirm"
+      comfirm: "Wait confirm"
       accepted: "Accepted"
       cancel: "Cancel"
       shipping: "Shipping"
@@ -46,6 +46,13 @@ en:
     application:
       title: "Love Flower"
   admin:
+    orders:
+      index:
+        buyer: "Buyer"
+        receiver: "Receiver"
+        phone: "Phone number of the recipient"
+        address: "Address"
+        status: "Status"
     products:
       new:
         title: "New product"
@@ -70,7 +77,6 @@ en:
       index:
         new: "New Product"
     users:
-
       destroy:
         success: "User deleted"
         danger: "Can't delete this user"
@@ -86,14 +92,10 @@ en:
         sure: "You sure?"
         new: "New Product"
       leftmenu:
+        orders: "Orders"
         menu: "Menu"
         user: "User"
         product: "Product"
-        users:
-        ID: "ID"
-        name: "Name"
-        email: "Email"
-        date: "Created Date"
       users:
         ID: "ID"
         name: "Name"
