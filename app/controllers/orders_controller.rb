@@ -31,10 +31,12 @@ class OrdersController < ApplicationController
     if @order.present?
       @order.destroy
       flash[:success] = t ".success"
-      redirect_to user_url(current_user)
     else
       flash[:danger] = t ".danger"
-      redirect_to root_url
+    end
+    respond_to do |format|
+      format.html { redirect_to @user }
+      format.js
     end
   end
 

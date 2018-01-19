@@ -66,6 +66,7 @@ vi:
         phone: "SDT nguoi nhan"
         address: "Dia chi"
         status: "Tinh trang"
+        write: "Xuat ra tep csv"
     products:
       new:
         title: "Thêm sản phẩm"

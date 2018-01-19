@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :products
     resources :categories
     resources :orders
+    #post "/write" to: "orders"
   end
 
   root "static_pages#home"

@@ -6,6 +6,7 @@
   <td><%= order.receving_address %></td>
   <td><%= order.isstatus %></td>
   <td>
-    <%= link_to (t ".delete"), admin_order_path(order), method: :delete %>
+    <%= link_to (t ".delete"), order_path(order), method: :delete,
+    											:remote => true %>
   </td>
 </tr>
