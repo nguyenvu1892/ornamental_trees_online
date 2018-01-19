@@ -1,0 +1,22 @@
+$(function(){
+   delete_comment = function(e, comment){
+     e.preventDefault();
+     var comment_id = comment.id;
+     var product_id = $('#comment_product_id').val();
+     var confirm_del = confirm('<%= I18n.t "comments.destroy.confirm" %>');
+     if (confirm_del == true) {
+       $.ajax({
+         method: 'DELETE',
+         url: '/products/' + product_id + '/comments/' + comment_id
+       }).success(function(data){
+         if (data.status == "success"){
+           $('#comment-' + comment_id).hide();
+         } else {
+           alert('<%= I18n.t "comments.destroy.success" %>');
+         }
+       }).error(function(){
+           alert('<%= I18n.t "comments.destroy.fail" %>');
+       });
+     }
+   }
+ });

@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   has_many :reviews
   has_many :images
   has_many :carts
-
+  has_many :comments, dependent: :destroy
   mount_uploader :image, ImagesUploader
 
   validates :name, presence: true

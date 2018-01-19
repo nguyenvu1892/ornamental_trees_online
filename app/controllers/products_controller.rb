@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find_by id: params[:id]
-
+    @comments = @product.comments.paginate page: params[:page]
     if @product
       flash[:success] = t "admin.products.destroy.success"
     else
