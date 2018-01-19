@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="title-order-page">
+      <%= t ".new_order" %>
+    </div>
+    <div class="card-content">
+      <p><%= t ".dear" %> <%= @user.name %>,</p>
+
+      <p><%= t ".email_thank" %></p>
+
+      <p><%= t ".order_id" %>
+        : <%= link_to @order.order_number, root_url + 'orders/history' + "?email=#{@user.email}&time=#{@time}&token_key=#{@token_key}" %></p>
+
+      <table>
+        <thead>
+        <tr>
+          <th class="mail-order-th-name"><%= t "orders.new.product_name" %></th>
+          <th class="mail-order-th"><%= t "shared.product.index.quantity" %></th>
+          <th class="mail-order-th"><%= t "products.show.price" %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @order.order_items.each do |order_item| %>
+          <tr>
+            <td><%= order_item.product.name %></td>
+            <td style="text-align: center;"><%= order_item.quantity.to_s %></td>
+            <td>$<%= order_item.total_price.to_s %></td>
+          </tr>
+
+          <tr class="total_line">
+            <td></td>
+            <td><%= t ".total" %></td>
+            <td class="total_cell"><%= number_to_currency(@order.total) %></td>
+          </tr>
+
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

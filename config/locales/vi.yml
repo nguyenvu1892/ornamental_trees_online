@@ -119,6 +119,7 @@ vi:
   shared:
     product:
       cart: "Thêm vào giỏ hàng"
+      shop_cart: "Cart"
       index:
         id: "ID"
         product_name: "Tên Sản Phẩm"
@@ -169,3 +170,14 @@ vi:
       fail: "Xay ra loi"
     form:
       add: "Them nhan xet"
+  shop_mailer:
+    new_receipt:
+      email_thank: "Thank you for purchasing our product. Below is your receipt details:"
+      new_order: "New Order Information"
+      dear: "Dear"
+      order_id: "Order ID:"
+      total: "Total"
+  mailers:
+    shop_mailer:
+      shop_mail: "'Super Shop <admin@shop.com>'"
+      title: "'Complete payment from Super Shop'"

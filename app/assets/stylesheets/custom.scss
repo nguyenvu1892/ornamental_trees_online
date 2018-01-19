@@ -5697,21 +5697,26 @@ input:not([type]) + label:after, input[type=text] + label:after, input[type=pass
   padding-left: 4rem;
   width: calc(100% - 4rem)
 }
+
 .input-field input[type=text]:focus + label {
   color: #000;
 }
+
 .input-field input[type=text]:focus {
   border-bottom: 1px solid #000;
   box-shadow: 0 1px 0 0 #000;
 }
+
 .input-field input[type=text].valid {
   border-bottom: 1px solid #000;
   box-shadow: 0 1px 0 0 #000;
 }
+
 .input-field input[type=text].invalid {
   border-bottom: 1px solid #000;
   box-shadow: 0 1px 0 0 #000;
 }
+
 .input-field .prefix.active {
   color: #000;
 }
@@ -14059,7 +14064,59 @@ main {
   display: inline-block;
 }
 
-
 select {
   display: inline;
+}
+
+.mail-order-th {
+  min-width: 100px;
+  text-align: left;
+}
+
+.mail-order-th-name {
+  min-width: 100px;
+  text-align: left;
+}
+
+.card {
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #f3f3f3;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+}
+
+.card .card-image {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.card .card-content {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0 0 2px 2px;
+}
+
+.container {
+  margin-left: 10px;
+  width: 98%;
+  max-width: 1300px;
+}
+
+.title-order-page {
+  color: white;
+  background-color: darkcyan;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+p {
+  line-height: 1.5;
 }
