@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    get 'categories/new'
+  end
+
+  get 'categories/new'
+
   get "auth/:provider/callback", to: "sessions#create"
   get "auth/failure", to: redirect("/")
   get "static_pages/about"

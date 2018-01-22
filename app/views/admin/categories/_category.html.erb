@@ -1,0 +1,9 @@
+<tr>
+  <td><%= category.name %></td>
+  <td>
+    <%= link_to (t ".del"), admin_category_path(category), method: :delete %>
+  </td>
+  <td>
+    <%= link_to (t ".edit"), edit_admin_category_path(category) %>
+  </td>
+</tr>
