@@ -1,0 +1,5 @@
+<%= form_for [:admin, @category] do |f| %>
+ <%= f.label :name, t(".name") %>
+ <%= f.text_field :name, placehoder: t(".name") %><br>
+ <%= f.submit (t "admin.products.new.add"), class: "btn" %>
+<% end %>
