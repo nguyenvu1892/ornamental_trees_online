@@ -53,6 +53,7 @@ en:
         phone: "Phone number of the recipient"
         address: "Address"
         status: "Status"
+        write: "Write to csv file"
     products:
       new:
         title: "New product"
